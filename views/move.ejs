@@ -1,0 +1,32 @@
+<%- include("partials/head") %>
+
+    <body>
+
+        <%- include("partials/nav") %>
+
+        <div class= "container">
+	
+
+            <div style="width: 50%; margin:30px auto; text-align :left;">
+                <h1 style ="margin:50px; text-align: center;" >IDEA TOOL</h1>
+                <form method="post" action="/ideatool/<%= idea.id %>/move?_method=PATCH"  >
+                    
+                    <div class="form-group">
+                        <label for="oldsub" style= "text-align: left;"><b>Your Old Bucket: </b> </label>
+                        <input class="form-control" type= "text" placeholder="Name here" name="oldsub" value="<%= idea.subject%> ">		
+                    </div>
+                    <div class="form-group">
+                        <label for="newsub" style= "text-align: left;"><b>Enter the new bucket here: </b> </label>
+                        <input class="form-control" type= "text" placeholder="Enter the new subject here: " name="newsub">	
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-default btn-block">SAVE && SUBMIT!!</button>		
+                    </div>
+                
+            </form>
+            </div>
+            <div>
+                <a class="btn btn-lg" href="/ideatool">Go back</a>
+            </div>
+        </div>
+</html>

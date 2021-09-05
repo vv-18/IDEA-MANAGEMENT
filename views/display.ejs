@@ -1,0 +1,41 @@
+<%- include("partials/head") %>
+
+    <body>
+
+        <%- include("partials/nav") %>
+
+        
+        <div class='container'>
+            <div class ="row " style="display:flex; flex-wrap:wrap;">
+                <% for(let i of ideas) { %> 
+                    
+                <div class="col-md-4 col-sm-6"> 
+                    <div class= "thumbnail">
+                    
+                        <div style="text-align :center;"class="caption">
+                            <h3><%=i.subject %></h3>
+                            <br>
+                            <h4 style="text-align: left;"><%=i.idea %></h4>
+
+                            <h5 style="text-align: right;"><b> ~ <%=i.name %></b></h5>
+                            <br>
+
+                            <form method="POST" action="/ideatool/<%= i.id%>?_method=DELETE">
+                                <button  class="btn btn-danger" href="/ideatool/<%=i.id%>/delete" style="display: inline;">Delete</button>
+
+                            </form>
+                            <br>
+                            <a class="btn btn-warning" href="/ideatool/<%= i.id%>/edit" style ="display:inline;">Edit</a>
+                            <a class="btn btn-success" href="/ideatool/<%= i.id%>/move" style ="display:inline;">Move</a>
+                        </div>
+                    </div>	
+                </div>
+            <% } %>
+            </div>
+        </div>
+        
+
+        <!-- <h1>THE HOME PAGE <%= 3+4%></h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> -->
+    </body>
+</html>
