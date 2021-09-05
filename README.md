@@ -4,8 +4,11 @@ Idea management is a practice used to organize insights. It allows large numbers
 
 # FEATURES
 User can add/remove/edit highlights
+
 User can create buckets to group highlights in
+
 User can group highlights into buckets
+
 User can move highlights from one bucket to another.
 
 This web-app is basically the way to connect people through their different ideas and could collaborate and can work on implementing those ideas.
